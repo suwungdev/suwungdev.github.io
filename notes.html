@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A development note about building AIODL, its architecture, deployment, and lessons learned.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#f5f2eb">
+<title>Notes — suwung.id</title>
+<link rel="icon" type="image/png" href="assets/s-mark.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="nav"><div class="wrap nav-in">
+<a class="brand" href="index.html"><img src="assets/s-mark.png" alt="suwung.id"><span class="brand-name">suwung<span>.id</span></span></a>
+<div class="links"><a href="index.html">Home</a><a href="index.html#project">Project</a><a href="about.html">About</a><a href="notes.html">Notes</a><a href="contact.html">Contact</a></div>
+<a class="nav-btn" href="https://github.com/suwungdev" target="_blank" rel="noopener">GitHub ↗</a>
+</div></nav>
+<main>
+<section class="section"><div class="wrap article">
+<div class="article-meta">Notes · 18 August 2026</div><h1>Building AIODL: from an idea to a public project.</h1>
+<p>AIODL started as a simple idea: create a small web interface that can take a supported media URL and turn it into useful download information. Instead of treating the project as a large product, I used it as a practical way to learn about web requests, server-side processing, deployment, and user experience.</p>
+<h2>The goal was simplicity</h2><p>The first design decision was to keep the interface focused. A visitor should understand what the tool does without reading a long manual. That led to a small input flow, clear actions, and a result area that can be expanded as the project evolves.</p>
+<h2>Why Node.js and Express?</h2><p>The backend needs to perform work that should not be exposed directly in the browser. Node.js provides a familiar JavaScript environment for that server-side layer, while Express keeps the HTTP API straightforward and easy to maintain.</p>
+<h2>Deployment lessons</h2><p>One useful lesson from the project is that hosting strategy should follow the application. Static pages can live comfortably on GitHub Pages, while an application that needs a server runtime belongs on a platform that supports the required runtime. Keeping those responsibilities separate makes a small project easier to operate.</p>
+<h2>What comes next</h2><p>AIODL is intentionally an evolving project. Future work will focus on stability, clearer error handling, performance, and a better user experience rather than adding features just for the sake of adding them.</p>
+<div class="notice"><strong>About third-party content:</strong> AIODL does not host or claim ownership of third-party media. Users are responsible for using the service in accordance with the rights, terms, and laws applicable to the content they access.</div>
+</div></section>
+</main>
+<footer><div class="wrap foot"><div><div class="foot-brand">suwung.id</div><div>Built with curiosity · 2026</div></div><div class="foot-links"><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div></div></footer>
+</body></html>
