@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="A development note about building AIODL, its architecture, deployment, and lessons learned.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Development notes and project stories from suwung.id.">
 <meta name="robots" content="index,follow">
-<meta name="theme-color" content="#f5f2eb">
+<meta name="google-adsense-account" content="ca-pub-9232296321250001">
+<meta name="theme-color" content="#191816">
 <title>Notes — suwung.id</title>
 <link rel="icon" type="image/png" href="assets/s-mark.png">
 <link rel="stylesheet" href="assets/style.css">
@@ -12,19 +14,23 @@
 <body>
 <nav class="nav"><div class="wrap nav-in">
 <a class="brand" href="index.html"><img src="assets/s-mark.png" alt="suwung.id"><span class="brand-name">suwung<span>.id</span></span></a>
-<div class="links"><a href="index.html">Home</a><a href="index.html#project">Project</a><a href="about.html">About</a><a href="notes.html">Notes</a><a href="contact.html">Contact</a></div>
-<a class="nav-btn" href="https://github.com/suwungdev" target="_blank" rel="noopener">GitHub ↗</a>
+<div class="links"><a href="index.html">Home</a><a href="index.html#project">Projects</a><a href="ramadhan-2027.html">Ramadhan</a><a href="about.html">About</a><a href="notes.html">Notes</a><a href="contact.html">Contact</a></div>
+<a class="nav-btn" href="https://github.com/suwungdev" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
 </div></nav>
 <main>
 <section class="section"><div class="wrap article">
-<div class="article-meta">Notes · 18 August 2026</div><h1>Building AIODL: from an idea to a public project.</h1>
-<p>AIODL started as a simple idea: create a small web interface that can take a supported media URL and turn it into useful download information. Instead of treating the project as a large product, I used it as a practical way to learn about web requests, server-side processing, deployment, and user experience.</p>
-<h2>The goal was simplicity</h2><p>The first design decision was to keep the interface focused. A visitor should understand what the tool does without reading a long manual. That led to a small input flow, clear actions, and a result area that can be expanded as the project evolves.</p>
-<h2>Why Node.js and Express?</h2><p>The backend needs to perform work that should not be exposed directly in the browser. Node.js provides a familiar JavaScript environment for that server-side layer, while Express keeps the HTTP API straightforward and easy to maintain.</p>
-<h2>Deployment lessons</h2><p>One useful lesson from the project is that hosting strategy should follow the application. Static pages can live comfortably on GitHub Pages, while an application that needs a server runtime belongs on a platform that supports the required runtime. Keeping those responsibilities separate makes a small project easier to operate.</p>
-<h2>What comes next</h2><p>AIODL is intentionally an evolving project. Future work will focus on stability, clearer error handling, performance, and a better user experience rather than adding features just for the sake of adding them.</p>
-<div class="notice"><strong>About third-party content:</strong> AIODL does not host or claim ownership of third-party media. Users are responsible for using the service in accordance with the rights, terms, and laws applicable to the content they access.</div>
+<div class="article-meta">Notes · 30 August 2026</div>
+<h1>Building a small project space.</h1>
+<p>Suwung.id started as a simple place to publish AIODL and document the process behind it. As more tools were built, the site evolved into a small home for projects that are useful, experimental, or simply worth keeping.</p>
+<h2>From one project to several</h2>
+<p>AIODL was the first public project under the suwung.id name. MYIP followed as an IP intelligence and network lookup tool, while QRIS Dinamis became a focused utility for generating dynamic payment QR codes from supported QRIS data.</p>
+<h2>Why keep the site simple?</h2>
+<p>A project portfolio does not need to behave like a large application. Keeping the landing pages static makes them fast, easy to deploy, and easy to maintain. The individual projects can then use whatever stack fits their own requirements.</p>
+<h2>What comes next</h2>
+<p>More tools and experiments may be added over time. The focus remains on useful features, understandable interfaces, stability, and documenting what was learned along the way.</p>
+<div class="notice"><strong>Project note:</strong> Suwung.id is an independent project space. Individual projects may have their own repositories, technologies, terms, and limitations.</div>
 </div></section>
 </main>
 <footer><div class="wrap foot"><div><div class="foot-brand">suwung.id</div><div>Built with curiosity · 2026</div></div><div class="foot-links"><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div></div></footer>
-</body></html>
+</body>
+</html>

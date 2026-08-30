@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Countdown Ramadhan 2027 dan Hari Raya Idulfitri 2027 — suwung.id.">
+<meta name="robots" content="index,follow">
+<meta name="google-adsense-account" content="ca-pub-9232296321250001">
+<meta name="theme-color" content="#191816">
+<title>Ramadhan 2027 — suwung.id</title>
+<link rel="icon" type="image/png" href="assets/s-mark.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="nav"><div class="wrap nav-in">
+<a class="brand" href="index.html"><img src="assets/s-mark.png" alt="suwung.id"><span class="brand-name">suwung<span>.id</span></span></a>
+<div class="links"><a href="index.html">Home</a><a href="index.html#project">Projects</a><a href="ramadhan-2027.html">Ramadhan</a><a href="about.html">About</a><a href="notes.html">Notes</a><a href="contact.html">Contact</a></div>
+<a class="nav-btn" href="https://github.com/suwungdev" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+</div></nav>
+<main>
+<section class="ramadan-hero">
+<div class="wrap">
+<div class="ramadan-eyebrow">SUWUNG.ID / CALENDAR</div>
+<h1 class="ramadan-title">Counting down to <em>Ramadhan.</em></h1>
+<p class="ramadan-subtitle">A simple countdown for Ramadhan 1448 H and Hari Raya Idulfitri 1448 H.</p>
+<div class="countdown-grid">
+<div class="count-box"><span class="count-number" id="days">00</span><span class="count-label">Days</span></div>
+<div class="count-box"><span class="count-number" id="hours">00</span><span class="count-label">Hours</span></div>
+<div class="count-box"><span class="count-number" id="minutes">00</span><span class="count-label">Minutes</span></div>
+<div class="count-box"><span class="count-number" id="seconds">00</span><span class="count-label">Seconds</span></div>
+</div>
+<div class="ramadan-date">RAMADHAN · 08 FEBRUARY 2027 · WIB</div>
+</div>
+</section>
+<section class="section"><div class="wrap">
+<div class="kicker">Important dates</div><h2>Two dates worth remembering.</h2>
+<div class="ramadan-events">
+<div class="event"><div class="event-number">01</div><div><div class="event-name">Ramadhan 1448 H</div><div class="event-countdown" id="ramadanStatus">Loading countdown...</div></div><div class="event-date">08 FEB 2027</div></div>
+<div class="event"><div class="event-number">02</div><div><div class="event-name">Hari Raya Idulfitri 1448 H</div><div class="event-countdown" id="eidStatus">Loading countdown...</div></div><div class="event-date">09 MAR 2027</div></div>
+</div>
+<div class="ramadan-note"><strong>Note.</strong> Countdown ini memakai target tanggal yang ditentukan untuk halaman Suwung.id: Ramadhan pada <strong>8 Februari 2027</strong> dan Hari Raya Idulfitri pada <strong>9 Maret 2027</strong>. Penetapan resmi awal Ramadhan dan Idulfitri dapat mengikuti keputusan otoritas keagamaan.</div>
+</div></section>
+<script>
+const targets={
+  ramadan:new Date("2027-02-08T00:00:00+07:00"),
+  eid:new Date("2027-03-09T00:00:00+07:00")
+};
+function pad(n){return String(n).padStart(2,"0")}
+function countdown(target){
+  const d=target.getTime()-Date.now();
+  if(d<=0)return{finished:true,days:0,hours:0,minutes:0,seconds:0};
+  const s=Math.floor(d/1000);
+  return{
+    finished:false,
+    days:Math.floor(s/86400),
+    hours:Math.floor((s%86400)/3600),
+    minutes:Math.floor((s%3600)/60),
+    seconds:s%60
+  };
+}
+function update(){
+  const r=countdown(targets.ramadan);
+  document.getElementById("days").textContent=r.days;
+  document.getElementById("hours").textContent=pad(r.hours);
+  document.getElementById("minutes").textContent=pad(r.minutes);
+  document.getElementById("seconds").textContent=pad(r.seconds);
+  document.getElementById("ramadanStatus").textContent=r.finished?"Ramadhan has arrived.":`${r.days} days remaining`;
+  const e=countdown(targets.eid);
+  document.getElementById("eidStatus").textContent=e.finished?"Hari Raya has arrived.":`${e.days} days remaining`;
+}
+update();
+setInterval(update,1000);
+</script>
+</main>
+<footer><div class="wrap foot"><div><div class="foot-brand">suwung.id</div><div>Built with curiosity · 2026</div></div><div class="foot-links"><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div></div></footer>
+</body>
+</html>
